@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./Ubuntu-Regular.ttf");
+}
+
+* {
+  font-family: "Ubuntu", sans-serif, system-ui;
+  transition: 0.25s;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  color: var(--global-text-color);
+}
+
+body {
+  transition: background 0.25s, color 0.25s;
+}
+
+button,
+#main-title {
+  cursor: pointer;
+}
+
+button,
+.main-button,
+.normal-button,
+.small-button {
+  transition: background 0.25s, color 0.25s;
+}
+
+button {
+  background: var(--button-bg);
+}
+
+button:hover,
+.small-button:hover,
+.normal-button:hover {
+  color: var(--button-hover-color);
+  background: var(--button-hover-bg);
+}
+
+.main-button,
+.normal-button {
+  width: 40vw;
+}
+
+.main-button {
+  height: 10vh;
+  font-size: 200%;
+  background: var(--main-button-bg);
+}
+
+.normal-button {
+  font-size: 150%;
+  margin: 5px;
+}
+
+.small-button {
+  font-size: 150%;
+}
+
+.small-button.red,
+.normal-button.red {
+  background: var(--small-button-red-bg);
+  color: var(--small-button-red-color);
+}
+
+.normal-button.red {
+  background: var(--normal-button-red-bg);
+  color: var(--normal-button-red-color);
+}
+
+.normal-button.red:hover {
+  background: var(--normal-button-red-hover-bg);
+  color: var(--normal-button-red-hover-color);
+}
+
+.small-button.red:hover {
+  background: var(--small-button-red-hover-bg);
+  color: var(--small-button-red-hover-color);
+}
+
+.notes {
+  display: flex;
+  justify-content: center;
+}
+
+.note {
+  width: 40vw;
+  margin: 0 auto;
+  background: var(--note-bg);
+  cursor: pointer;
+}
+
+.note:hover {
+  background: var(--note-hover-bg);
+}
+
+input.normal-input,
+#workspace {
+  width: 80vw;
+  height: 5vh;
+  font-size: 25px;
+  background: var(--workspace-bg);
+}
+
+#workspace {
+  text-align: left;
+  height: 65vh;
+  width: 40vw;
+  resize: none;
+}
+
+#workspace-iframe {
+  width: 40vw;
+  height: 65vh;
+  border: 2px solid var(--workspace-iframe-border);
+}
+
+@media (max-width: 770px) {
+  #workspace,
+  #workspace-iframe,
+  input.normal-input,
+  .normal-button,
+  .note,
+  .main-button,
+  .normal-button.red {
+    width: 90vw;
+    margin: auto;
+    max-width: 100vw;
+    display: block;
+  }
+
+  #workspace,
+  #workspace-iframe {
+    height: 50vh;
+  }
+}
+
+/* Light Mode */
+body.light-mode {
+  --button-bg: #d3d4f1; /* Azul claro */
+  --button-hover-bg: #2c2f48; /* Azul profundo */
+  --button-hover-color: #ffffff; /* Blanco */
+  --small-button-hover-color: #ffffff; /* Blanco */
+  --small-button-hover-bg: #4a4f7c; /* Azul medio */
+  --small-button-red-bg: #4a4f7c; /* Azul medio */
+  --small-button-red-color: #ffffff; /* Blanco */
+  --small-button-red-hover-bg: #2c2f48; /* Azul profundo */
+  --small-button-red-hover-color: #ffffff; /* Blanco */
+  --normal-button-red-bg: #4a4f7c; /* Azul medio */
+  --normal-button-red-color: #ffffff; /* Blanco */
+  --normal-button-red-hover-bg: #2c2f48; /* Azul profundo */
+  --normal-button-red-hover-color: #ffffff; /* Blanco */
+  --note-bg: #d3d4f1; /* Azul claro */
+  --note-hover-bg: #4a4f7c; /* Azul medio */
+  --workspace-iframe-border: #2c2f48; /* Azul profundo */
+  --workspace-bg: #d3d4f1; /* Azul claro */
+  --main-button-bg: #d3d4f1; /* Azul claro */
+  --global-text-color: #575772;
+  background: #ffffff; /* Blanco */
+  color: #2c2f48; /* Azul profundo */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --button-bg: #2c2f48; /* Azul profundo */
+  --button-hover-bg: #4a4f7c; /* Azul medio */
+  --button-hover-color: #2c2f48; /* Azul profundo */
+  --small-button-hover-color: #2c2f48; /* Azul profundo */
+  --small-button-hover-bg: #d3d4f1; /* Azul claro */
+  --small-button-red-bg: #5d3c74; /* Violeta oscuro */
+  --small-button-red-color: #f1e9fc; /* Violeta claro */
+  --small-button-red-hover-bg: #f1e9fc; /* Violeta claro */
+  --small-button-red-hover-color: #5d3c74; /* Violeta oscuro */
+  --normal-button-red-bg: #5d3c74; /* Violeta oscuro */
+  --normal-button-red-color: #f1e9fc; /* Violeta claro */
+  --normal-button-red-hover-bg: #f1e9fc; /* Violeta claro */
+  --normal-button-red-hover-color: #5d3c74; /* Violeta oscuro */
+  --note-bg: #4a4f7c1f; /* Azul medio translúcido */
+  --note-hover-bg: #d3d4f1; /* Azul claro */
+  --workspace-iframe-border: #2c2f48; /* Azul profundo */
+  --workspace-bg: #2c2f48; /* Azul profundo */
+  --main-button-bg: #2c2f48; /* Azul profundo */
+  --global-text-color: #d3d4f1;
+  background: #1d1f33; /* Azul muy oscuro */
+  color: #d3d4f1; /* Azul claro */
+}

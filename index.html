@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumina Notes 🌃</title>
+  </head>
+  <link id="main-style" rel="stylesheet" href="style/index.css" />
+  <body>
+    <!-- HOME -->
+    <div id="HOME">
+      <h1 id="main-title">Lumina Notes 🌃</h1>
+      <span><span id="version"></span> | lightweight notes</span>
+      <br /><br />
+
+      <button class="normal-button" id="open-settings">⚙ settings</button>
+      <br /><br />
+
+      <button class="main-button" id="create-note">+</button>
+
+      <div id="notes"></div>
+
+      <div id="cub16-watermark">
+        <h4
+          style="
+            background-color: #000000a1;
+            width: 40vw;
+            margin: 20px auto;
+            color: #f9f9f9;
+          "
+        >
+          Lumina Notes by
+          <a
+            target="_blank"
+            href="https://github.com/cub16"
+            style="color: #c8c8c8"
+            >cub16</a
+          >
+        </h4>
+      </div>
+    </div>
+
+    <!-- NOTE EDITOR -->
+    <div id="NOTE_EDITOR" style="display: none">
+      <button class="normal-button" id="back-note-editor">↺ back</button>
+      <br /><br />
+      <input
+        type="text"
+        placeholder="✎ title"
+        class="normal-input"
+        id="note-title"
+      />
+      <br />
+
+      <br />
+      <textarea
+        id="workspace"
+        placeholder="𓂃🖊 let your words flow"
+        onscroll="syncScroll(noteWorkspace, workspaceIFrame)"
+      ></textarea>
+      <iframe src="" id="workspace-iframe" scrolling="no"></iframe>
+      <br />
+      <button class="normal-button" id="note-save">💾 save</button>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="SETTINGS" style="display: none">
+      <button class="normal-button" id="back-settings">↺ back</button>
+      <h1>⚙ settings</h1>
+      <br />
+      <button class="small-button" id="change-theme">🌅/🌃 change theme</button>
+      <br /><br />
+      <button class="small-button" id="import-btn">📩 import</button>
+      <button class="small-button" id="export-btn">📨 export</button>
+      <br /><br />
+      <button class="small-button red" id="reset-factory-settings">
+        🗑 reset factory settings
+      </button>
+      <br /><br />
+    </div>
+
+    <!-- HIDDEN -->
+    <div style="display: none">
+      <input type="file" id="real-import" accept=".JSON" />
+    </div>
+    <!-- LIBS -->
+    <script src="js/libs/sweetalert2-11.js"></script>
+    <script src="js/libs/marked.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/elements.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>
