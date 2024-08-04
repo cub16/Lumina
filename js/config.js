@@ -7,13 +7,15 @@ const userDataDefaults = {
 };
 
 const APP_INFO = {
-  version: "v0.1.0",
+  version: "v0.2.0",
   resetFactorySettings: () => {
     localStorage.clear();
     Object.assign(userData, userDataDefaults);
     localStorage.setItem("userData", JSON.stringify(userData));
     location.reload();
   },
+  workspaceCSS: "style/frameworks/pico.classless.slate.min.css",
+  workspaceFont: "style/Roboto-Regular.ttf",
 };
 
 let userData = {

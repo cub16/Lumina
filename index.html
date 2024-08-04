@@ -9,7 +9,7 @@
   <body>
     <!-- HOME -->
     <div id="HOME">
-      <h1 id="main-title">Lumina Notes 🌃</h1>
+      <h1 id="main-title">Lumina</h1>
       <span><span id="version"></span> | lightweight notes</span>
       <br /><br />
 
@@ -53,13 +53,12 @@
       <br />
 
       <br />
-      <textarea
-        id="workspace"
-        placeholder="𓂃🖊 let your words flow"
-        onscroll="syncScroll(noteWorkspace, workspaceIFrame)"
-      ></textarea>
+      <textarea id="workspace" placeholder="𓂃🖊 let your words flow"></textarea>
       <iframe src="" id="workspace-iframe" scrolling="no"></iframe>
       <br />
+      <button class="normal-button" id="note-single-export">
+        📄 single export (.md)
+      </button>
       <button class="normal-button" id="note-save">💾 save</button>
     </div>
 
@@ -70,8 +69,17 @@
       <br />
       <button class="small-button" id="change-theme">🌅/🌃 change theme</button>
       <br /><br />
-      <button class="small-button" id="import-btn">📩 import</button>
-      <button class="small-button" id="export-btn">📨 export</button>
+
+      <button class="small-button" id="single-import">
+        📄 single import (.md)
+      </button>
+
+      <br /><br />
+
+      <h1>🌐 global</h1>
+      <button class="small-button" id="import-btn">📩 import (.json)</button>
+      <br /><br />
+      <button class="small-button" id="export-btn">📨 export (.json)</button>
       <br /><br />
       <button class="small-button red" id="reset-factory-settings">
         🗑 reset factory settings
@@ -82,6 +90,7 @@
     <!-- HIDDEN -->
     <div style="display: none">
       <input type="file" id="real-import" accept=".JSON" />
+      <input type="file" id="real-single-import" accept=".MD" />
     </div>
     <!-- LIBS -->
     <script src="js/libs/sweetalert2-11.js"></script>

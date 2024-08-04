@@ -1,0 +1,7 @@
+---- Lumina Changelog v0.2.0 ---
+
+1. Fonts have been changed: Replaced the Ubuntu font with Roboto for general text, and set Orbitron for the main title.
+2. Single import/export feature added.
+3. When editing a note, its title will now be visible in the Markdown view.
+4. Code refactoring.
+5. Notification improvements.

@@ -1,10 +1,14 @@
 @font-face {
-  font-family: "Ubuntu";
-  src: url("./Ubuntu-Regular.ttf");
+  font-family: "Roboto";
+  src: url("./Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("./Orbitron-Regular.ttf");
 }
 
 * {
-  font-family: "Ubuntu", sans-serif, system-ui;
+  font-family: "Roboto", sans-serif, system-ui;
   transition: 0.25s;
   text-align: center;
   border-radius: 5px;
@@ -14,6 +18,15 @@
 
 body {
   transition: background 0.25s, color 0.25s;
+}
+
+#main-title {
+  font-family: "Orbitron", monospace;
+  padding: 15px;
+  letter-spacing: 10px;
+}
+#main-title:hover {
+  letter-spacing: 20px;
 }
 
 button,
